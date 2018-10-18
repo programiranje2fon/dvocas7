@@ -27,9 +27,9 @@ public class PotrosackaKorpa {
 	public double izracunajUkupnuCenu() {
 		double ukupnaCena = 0;
 		
-		for (int i = 0; i < namirnice.length; i++) {
-			if (namirnice[i] != null) {
-				ukupnaCena += namirnice[i].getCena();
+		for (Namirnica namirnica : namirnice) {
+			if (namirnica != null) {
+				ukupnaCena += namirnica.getCena();
 			}
 		}
 		
@@ -39,10 +39,10 @@ public class PotrosackaKorpa {
 	public Namirnica pronadjiNajskuplju() {
 		Namirnica najskuplja = null;
 		
-		for (int i = 0; i < namirnice.length; i++) {
-			if (namirnice[i] != null) {
-				if (najskuplja == null || namirnice[i].getCena() > najskuplja.getCena()) {
-					najskuplja = namirnice[i];
+		for (Namirnica namirnica : namirnice) {
+			if (namirnica != null) {
+				if (najskuplja == null || namirnica.getCena() > najskuplja.getCena()) {
+					najskuplja = namirnica;
 				}
 			}
 		}

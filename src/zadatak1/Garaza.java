@@ -27,8 +27,8 @@ public class Garaza {
 	}
 
 	public boolean daLiImaSlobodnih() {
-		for (int i = 0; i < mesta.length; i++) {
-			if (mesta[i].isSlobodno()) {
+		for (ParkingMesto parkingMesto : mesta) {
+			if (parkingMesto.isSlobodno()) {
 				return true;
 			}
 		}
@@ -36,22 +36,22 @@ public class Garaza {
 	}
 
 	public void uvedi(Vozilo novoVozilo) {
-		for (int i = 0; i < mesta.length; i++) {
-			if (mesta[i].isSlobodno()) {
-				mesta[i].setVozilo(novoVozilo);
-				mesta[i].setSlobodno(false);
+		for (ParkingMesto parkingMesto : mesta) {
+			if (parkingMesto.isSlobodno()) {
+				parkingMesto.setVozilo(novoVozilo);
+				parkingMesto.setSlobodno(false);
 				return;
 			}
 		}
-		
+
 		System.out.println("NEMA MESTA");
 	}
 
 	public void izvedi(Vozilo voziloZaIzlaz) {
-		for (int i = 0; i < mesta.length; i++) {
-			if (!mesta[i].isSlobodno() && mesta[i].getVozilo().equals(voziloZaIzlaz)) {
-				mesta[i].setVozilo(null);
-				mesta[i].setSlobodno(true);
+		for (ParkingMesto parkingMesto : mesta) {
+			if (!parkingMesto.isSlobodno() && parkingMesto.getVozilo().equals(voziloZaIzlaz)) {
+				parkingMesto.setVozilo(null);
+				parkingMesto.setSlobodno(true);
 				break;
 			}
 		}
