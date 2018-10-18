@@ -55,17 +55,17 @@ public class GarazaTest {
 	public void konstruktor_GarazaInt() {
 		ParkingMesto[] mestaValue = (ParkingMesto[]) TestUtil.getFieldValue(instance, "mesta");
 		
-		assertTrue("Za pozvani konstruktor sa argumentom 15, atribut mesta nije inicijalizovan", mestaValue != null);
+		assertTrue("Za pozvani konstruktor sa argumentom 5, atribut mesta nije inicijalizovan", mestaValue != null);
+		assertEquals("Za pozvani konstruktor sa argumentom 5, atribut namirnice nije kapaciteta 5, vec "+mestaValue.length, 5, mestaValue.length);
 		
 		for (int i = 0; i < mestaValue.length; i++) {
 			if (mestaValue[i] == null) {
-				fail("Za pozvani konstruktor sa argumentom 15, nisu inicijalizovani svi elementi atributa mesta");
+				fail("Za pozvani konstruktor sa argumentom 5, nisu inicijalizovani svi elementi atributa mesta");
 			} else if (!mestaValue[i].isSlobodno()) {
-				fail("Za pozvani konstruktor sa argumentom 15, u nizu mesta nemaju svi elementi u atributu slobodan vrednost \"true\"");
+				fail("Za pozvani konstruktor sa argumentom 5, u nizu mesta nemaju svi elementi u atributu slobodan vrednost \"true\"");
 			}
 		}
 	}
-	
 	
 	@Test
 	public void konstruktor_GarazaInt_brojMestaManjiOd1() {
@@ -130,7 +130,7 @@ public class GarazaTest {
 		
 		ParkingMesto[] mestaValue = (ParkingMesto[]) TestUtil.getFieldValue(instance, "mesta");
 		
-		assertTrue("Nakon sto se uvede novo vozilo, a u nizu mesta ima slobodnih mesta, to vozilo se ne nalazi u nizu mesta", Arrays.stream(mestaValue).anyMatch(m -> m.getVozilo() != null && m.getVozilo().equals(v1)));
+		assertTrue("Nakon sto se uvede novo vozilo, a u nizu mesta ima slobodnih mesta, to vozilo se ne nalazi u nizu mesta", Arrays.stream(mestaValue).anyMatch(m -> m.getVozilo() != null && m.getVozilo() == v1));
 	}
 	
 	@Test
