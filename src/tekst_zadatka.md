@@ -1,6 +1,7 @@
 # Laboratorijske vežbe – dvočas br. 7
 
 ## Zadatak 1
+(radi ga laborant u saradnji sa studentima)
 
 Napraviti javnu klasu **Vozilo** u paketu **zadatak1** koja ima:
 1. Privatni atribut **registarskiBroj** koji predstavlja registarski broj vozila (String).
@@ -25,6 +26,7 @@ Napraviti javnu klasu **Garaza** u paketu **zadatak1** koja ima:
 U prethodno kreiranoj klasi **ProbaGaraza** u paketu **zadatak1** kreirati jedan objekat klase **Garaza** kapaciteta 20 mesta i u njega uvesti dva automobila. nakon toga, izvesti prvi automobil. 
 
 ## Zadatak 2
+(rade ga studenti sami)
 
 Napraviti klasu **Namirnica** u paketu **zadatak2** koja ima:
 1. Privatne atribute **naziv** i **cena** koji predstavljaju naziv i cenu namirnice.
