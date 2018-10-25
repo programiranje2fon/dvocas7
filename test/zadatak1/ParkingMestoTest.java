@@ -90,4 +90,20 @@ public class ParkingMestoTest {
 		assertTrue("Metoda getVozilo ne vraca vrednost atributa vozilo", voziloValue == instance.getVozilo());
 	}
 	
+	@Test
+	public void metoda_toString_slobodno() {
+		instance.setSlobodno(true);
+		assertEquals("Metoda toString ne vraca String u odgovarajucem formatu", "SLOBODNO", instance.toString());
+	}
+	
+	@Test
+	public void metoda_toString_zauzeto() {
+		Vozilo v1 = new Vozilo();
+		v1.setRegistarskiBroj("AA123BB");
+		
+		instance.setVozilo(v1);
+		instance.setSlobodno(false);
+		assertEquals("Metoda toString ne vraca String u odgovarajucem formatu", "ZAUZETO, "+instance.getVozilo().toString(), instance.toString());
+	}
+	
 }

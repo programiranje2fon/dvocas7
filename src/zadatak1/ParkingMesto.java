@@ -20,5 +20,14 @@ public class ParkingMesto {
 	public void setVozilo(Vozilo vozilo) {
 		this.vozilo = vozilo;
 	}
+	
+	@Override
+	public String toString() {
+		if (slobodno) {
+			return "SLOBODNO";
+		} else {
+			return "ZAUZETO, " + vozilo.toString();
+		}
+	}
 
 }

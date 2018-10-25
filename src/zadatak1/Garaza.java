@@ -25,14 +25,11 @@ public class Garaza {
 			System.out.println("GRESKA");
 		}
 	}
-
-	public boolean daLiImaSlobodnih() {
-		for (ParkingMesto parkingMesto : mesta) {
-			if (parkingMesto.isSlobodno()) {
-				return true;
-			}
+	
+	public void ispisi() {
+		for (int i = 0; i < mesta.length; i++) {
+			System.out.println((i+1) + ". " + mesta[i].toString());
 		}
-		return false;
 	}
 
 	public void uvedi(Vozilo novoVozilo) {

@@ -106,20 +106,24 @@ public class GarazaTest {
 	}
 	
 	@Test
-	public void metoda_daLiImaSlobodnih_True() {
-		Garaza g1 = new Garaza(1);
-		
-		assertEquals("U slucaju kada nije uvedeno nijedno vozilo, metoda ne vraca true", true, g1.daLiImaSlobodnih());
-	}
-	
-	@Test
-	public void metoda_daLiImaSlobodnih_False() {
+	public void metoda_ispisi() {
 		Vozilo v1 = new Vozilo();
+		v1.setRegistarskiBroj("AB123XY");
+		instance.uvedi(v1);
 		
-		Garaza g1 = new Garaza(1);
-		g1.uvedi(v1);
+		instance.ispisi();
+
+		String ocekivaniIspis =
+				"1. ZAUZETO, Registarski broj: AB123XY" + System.lineSeparator() +
+				"2. SLOBODNO" + System.lineSeparator() +
+				"3. SLOBODNO" + System.lineSeparator() +
+				"4. SLOBODNO" + System.lineSeparator() +
+				"5. SLOBODNO";
 		
-		assertEquals("U slucaju kada je uvedeno jedno vozilo, a kapacitet garaze je 1, metoda ne vraca false", false, g1.daLiImaSlobodnih());
+		ocekivaniIspis = ocekivaniIspis.replaceAll("\\s","");
+		String ispis = outContent.toString().replaceAll("\\s","");
+		
+		assertTrue("Metoda ne ispisuje dobro sve podatke o parking mestima", ispis.equalsIgnoreCase(ocekivaniIspis));
 	}
 	
 	@Test

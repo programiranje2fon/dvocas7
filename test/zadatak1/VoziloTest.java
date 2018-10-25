@@ -75,4 +75,10 @@ public class VoziloTest {
 		assertEquals("Metoda equals ne vraca false kada je pozvana nad kucnim aparatom sa markom i modelom \"Laptop Acer A315\", a prosledjen je kucni aparat sa markom i modelom \"LG OLED65\"", false, v1.equals(v2));
 	}
 	
+	@Test
+	public void metoda_toString() {
+		instance.setRegistarskiBroj("AA123BB");
+		assertEquals("Metoda toString ne vraca String u odgovarajucem formatu", "Registarski broj: AA123BB", instance.toString());
+	}
+	
 }

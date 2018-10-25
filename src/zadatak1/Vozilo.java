@@ -22,5 +22,10 @@ public class Vozilo {
 		
 		return this.registarskiBroj.equals(v1.registarskiBroj);
 	}
+	
+	@Override
+	public String toString() {
+		return "Registarski broj: " + registarskiBroj;
+	}
 
 }
