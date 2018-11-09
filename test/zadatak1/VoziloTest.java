@@ -78,7 +78,7 @@ public class VoziloTest {
 	@Test
 	public void metoda_toString() {
 		instance.setRegistarskiBroj("AA123BB");
-		assertEquals("Metoda toString ne vraca String u odgovarajucem formatu", "Registarski broj: AA123BB", instance.toString());
+		assertTrue("Metoda toString ne vraca vrednost atributa registarski broj", instance.toString().contains("AA123BB"));
 	}
 	
 }
