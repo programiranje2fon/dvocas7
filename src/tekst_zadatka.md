@@ -37,7 +37,7 @@ U prethodno kreiranoj klasi **ProbaGaraza** u paketu **zadatak1** kreirati jedan
 *(studenti rade sami)*
 
 Napraviti klasu **Namirnica** u paketu **zadatak2** koja ima:
-1. Privatne atribute **naziv** i **cena** koji predstavljaju naziv i cenu namirnice.
+1. Privatne atribute **naziv** i **cena** koji predstavljaju naziv i cenu namirnice (double).
 2. Odgovarajuće javne get i set metode za ova dva atributa.
 
 Napraviti klasu **PotrosackaKorpa** u paketu **zadatak2** koja ima:
