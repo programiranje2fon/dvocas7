@@ -45,7 +45,7 @@ public class PotrosackaKorpaTest {
 	}
 	
 	@Test
-	public void atribut_namirnicevidljivost() {
+	public void atribut_namirnice_vidljivost() {
 		assertTrue("Atribut namirnice nije privatan", TestUtil.hasFieldModifier(PotrosackaKorpa.class, "namirnice", Modifier.PRIVATE));
 	}
 	
@@ -81,7 +81,7 @@ public class PotrosackaKorpaTest {
 	}
 	
 	@Test
-	public void metoda_uvedi_nemaMesta() {
+	public void metoda_dodajUKorpu_nemaMesta() {
 		Namirnica n1 = new Namirnica();
 		Namirnica n2 = new Namirnica();
 		
