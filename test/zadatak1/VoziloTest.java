@@ -72,7 +72,7 @@ public class VoziloTest {
 		Vozilo v2 = new Vozilo();
 		v2.setRegistarskiBroj("cc456DD");
 		
-		assertEquals("Metoda equals ne vraca \"false\" kada je pozvana nad vozilom sa registracijom \"AA123BB\", a prosledjeno je vozilo sa registarskim brojem \"cc456DD\"", true, v1.equals(v2));
+		assertEquals("Metoda equals ne vraca \"false\" kada je pozvana nad vozilom sa registracijom \"AA123BB\", a prosledjeno je vozilo sa registarskim brojem \"cc456DD\"", false, v1.equals(v2));
 	}
 	
 	@Test
