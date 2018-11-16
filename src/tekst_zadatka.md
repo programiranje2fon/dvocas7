@@ -19,7 +19,7 @@ Napraviti javnu klasu **ParkingMesto** u paketu **zadatak1** koja ima:
 
 Napraviti javnu klasu **Garaza** u paketu **zadatak1** koja ima:
 1. Privatni atribut **mesta** koji predstavlja niz objekata klase **ParkingMesto**.
-2. Javni **konstruktor** koji kao parametar prima broj koji predstavlja kapacitet garaže tj. ukupan broj parking mesta. Ako je uneti broj veći od nule, potrebno je inicijalizovati atribut **mesta** na taj broj. Ako je uneti broj nula ili manji od nule, kapacitet garaže se postavlja na 40 i ispisuje se poruka "GRESKA". U svakom slučaju je potrebno inicijalizovati svako parking mesto i postaviti ga da bude slobodno.
+2. Javni **konstruktor** koji kao parametar prima broj koji predstavlja kapacitet garaže tj. ukupan broj parking mesta. Ako je uneti broj veći od nule, potrebno je inicijalizovati niz **mesta** na taj kapacitet. Ako je uneti broj nula ili manji od nule, kapacitet garaže se postavlja na 40 i ispisuje se poruka "GRESKA". U svakom slučaju je potrebno inicijalizovati svako parking mesto i postaviti ga da bude slobodno.
 3. Javni **konstruktor** koji kao ulaz dobija niz objekata klase **ParkingMesto**. Ako uneti niz nije NULL, onda se postavlja kao vrednost atributa **mesta**. U suprotnom, ispisuje se poruka "GRESKA".
 4. Javnu metodu **ispisi** koja ispisuje u konzoli podatke o svim parking mestima sa rednim brojevima parking mesta, na primer:
 <ol>
