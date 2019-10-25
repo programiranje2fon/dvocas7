@@ -71,7 +71,7 @@ public class GarazaTest {
 	public void konstruktor_GarazaInt_brojMestaManjiOd1() {
 		Garaza g1 = new Garaza(0);
 		
-		assertTrue("NE ispisuje se rec GRESKA u slucaju da je prosledjeno 0 konstruktoru Garaza(int)", outContent.toString().trim().equalsIgnoreCase("GRESKA"));
+		assertTrue("NE ispisuje se rec GRESKA u slucaju da je prosledjeno 0 konstruktoru Garaza(int)", outContent.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 		
 		ParkingMesto[] mestaValue = (ParkingMesto[]) TestUtil.getFieldValue(g1, "mesta");
 		
@@ -102,7 +102,7 @@ public class GarazaTest {
 	public void konstruktor_Garaza_null() {
 		new Garaza(null);
 		
-		assertTrue("NE ispisuje se rec GRESKA u slucaju da je prosledjeno null konstruktoru Garaza()", outContent.toString().trim().equalsIgnoreCase("GRESKA"));
+		assertTrue("NE ispisuje se rec GRESKA u slucaju da je prosledjeno null konstruktoru Garaza()", outContent.toString().toLowerCase().contains("GRESKA".toLowerCase()));
 	}
 	
 	@Test
@@ -146,7 +146,7 @@ public class GarazaTest {
 		g1.uvedi(v1);
 		g1.uvedi(v2);
 		
-		assertTrue("NE ispisuje se rec NEMA MESTA u slucaju da je uvedeno novo vozilo u garazu u kojoj nema slobodnih mesta", outContent.toString().trim().equalsIgnoreCase("NEMA MESTA"));
+		assertTrue("NE ispisuje se rec NEMA MESTA u slucaju da je uvedeno novo vozilo u garazu u kojoj nema slobodnih mesta", outContent.toString().toLowerCase().contains("NEMA MESTA".toLowerCase()));
 	}
 	
 	@Test
