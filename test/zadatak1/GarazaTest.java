@@ -14,9 +14,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import test.TestUtil;
-import zadatak1.Garaza;
-import zadatak1.ParkingMesto;
-import zadatak1.Vozilo;
 
 public class GarazaTest {
 
@@ -112,6 +109,21 @@ public class GarazaTest {
 		instance.uvedi(v1);
 		
 		instance.ispisi();
+		
+		String[] linijeIspisa = outContent.toString().split(System.lineSeparator());
+		
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, prva linija ispisa treba da sadrzi broj \"1.\"", linijeIspisa[0].contains("1."));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, prva linija ispisa treba da sadrzi rec \"ZAUZETO\"", linijeIspisa[0].toLowerCase().contains("zauzeto"));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, prva linija ispisa treba da sadrzi registarski broj vozila", linijeIspisa[0].contains("AB123XY"));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, druga linija ispisa treba da sadrzi broj \"2.\"", linijeIspisa[1].contains("2."));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, druga linija ispisa treba da sadrzi rec \"SLOBODNO\"", linijeIspisa[1].toLowerCase().contains("slobodno"));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, treca linija ispisa treba da sadrzi broj \"3.\"", linijeIspisa[2].contains("3."));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, treca linija ispisa treba da sadrzi rec \"SLOBODNO\"", linijeIspisa[3].toLowerCase().contains("slobodno"));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, cetvrta linija ispisa treba da sadrzi broj \"4.\"", linijeIspisa[3].contains("4."));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, cetvrta linija ispisa treba da sadrzi rec \"SLOBODNO\"", linijeIspisa[3].toLowerCase().contains("slobodno"));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, peta linija ispisa treba da sadrzi broj \"5.\"", linijeIspisa[4].contains("5."));
+		assertTrue("Ako je garaza kreirana sa pet parking mesta, a samo prvo je zauzeto, peta linija ispisa treba da sadrzi rec \"SLOBODNO\"", linijeIspisa[4].toLowerCase().contains("slobodno"));
+
 
 		String ocekivaniIspis =
 				"1. ZAUZETO, Registarski broj: AB123XY" + System.lineSeparator() +
